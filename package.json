@@ -1,0 +1,19 @@
+{
+  "name": "liam",
+  "author": "Andrea Leone <git@andrealone.xyz>",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "watch": "grunt --gruntfile tasks.coffee watch",
+    "ts":    "grunt --gruntfile tasks.coffee ts"
+  },
+  "dependencies": {
+    "koa": "^2.5.3",
+    "@types/koa": "^2.0.46"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-ts": "^6.0.0-beta.21",
+    "typescript": "^3.1.3"
+  }
+}
