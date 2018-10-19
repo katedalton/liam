@@ -1,6 +1,6 @@
 
-import Koa       = require('koa')
-import Firebase  = require('firebase')
+import Koa      = require('koa')
+import Firebase = require('firebase')
 
 import Parser from './helpers/parser'
 
@@ -20,11 +20,7 @@ Firebase.initializeApp(config)
 
 app.use(async (ctx) => {
 
-  const
-    request = ctx.request,
-    response = ctx.response
-  
-  parser.incomingRequest(request)
+  parser.incomingRequest(ctx.request)
 
   ctx.body = JSON.stringify({
     xyz : true
