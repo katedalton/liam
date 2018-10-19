@@ -20,11 +20,9 @@ Firebase.initializeApp(config)
 
 app.use(async (ctx) => {
 
-  parser.incomingRequest(ctx.request)
+  const request = parser.incomingRequest(ctx.request)
 
-  ctx.body = JSON.stringify({
-    xyz : true
-  })
+  //ctx.body = JSON.stringify()
   
 })
 
