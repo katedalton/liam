@@ -8,6 +8,7 @@
     "ts": "grunt --gruntfile tasks.coffee ts"
   },
   "dependencies": {
+    "firebase": "^5.5.5",
     "koa": "^2.5.3",
     "@types/koa": "^2.0.46"
   },
