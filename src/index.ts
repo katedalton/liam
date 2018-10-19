@@ -2,8 +2,11 @@
 import Koa       = require('koa')
 import Firebase  = require('firebase')
 
+import Parser from './helpers/parser'
+
 const
-  app = new Koa(),
+  app    = new Koa(),
+  parser = new Parser(app),
   config = {
     projectId:         "liam-ab541",
     authDomain:        "liam-ab541.firebaseapp.com",
@@ -21,9 +24,11 @@ app.use(async (ctx) => {
     request = ctx.request,
     response = ctx.response
   
-  console.log(request)
+  parser.incomingRequest(request)
 
-  ctx.body = 'Hello Koa'
+  ctx.body = JSON.stringify({
+    xyz : true
+  })
   
 })
 
