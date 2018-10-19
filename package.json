@@ -1,10 +1,11 @@
 {
   "name": "liam",
+  "description": "git/GitLab virtual assistant",
   "author": "Andrea Leone <git@andrealone.xyz>",
   "scripts": {
     "start": "node dist/src/index.js",
     "watch": "grunt --gruntfile tasks.coffee watch",
-    "ts":    "grunt --gruntfile tasks.coffee ts"
+    "ts": "grunt --gruntfile tasks.coffee ts"
   },
   "dependencies": {
     "koa": "^2.5.3",
