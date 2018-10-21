@@ -2,7 +2,7 @@
 import Koa      = require('koa')
 import Firebase = require('firebase')
 
-import Parser from './helpers/parser'
+import Parser from './lib/parser'
 
 const
   app    = new Koa(),
@@ -22,8 +22,8 @@ app.use(async (ctx) => {
 
   const request = parser.incomingRequest(ctx.request)
 
-  //ctx.body = JSON.stringify()
+  ctx.body = 'Hi.'
   
 })
 
-app.listen(3000)
+app.listen(process.env.PORT)
