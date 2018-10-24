@@ -2,21 +2,15 @@
 import Koa      = require('koa')
 import Firebase = require('firebase')
 
-import Parser from './lib/parser'
+import Authenticator from './lib/authenticator'
+import Parser        from './lib/parser'
 
 const
   app    = new Koa(),
-  parser = new Parser(app),
-  config = {
-    projectId:         "liam-ab541",
-    authDomain:        "liam-ab541.firebaseapp.com",
-    storageBucket:     "liam-ab541.appspot.com",
-    databaseURL:       "https://liam-ab541.firebaseio.com",
-    apiKey:            "AIzaSyArz2mYcusoD7zfX6y5cbguqWBS8HU7q34",
-    messagingSenderId: "111004570004"
-  }
+  auth   = new Authenticator(),
+  parser = new Parser(app)
 
-Firebase.initializeApp(config)
+//Firebase.initializeApp(JSON.parse(process.env.FirebaseConfig as string))
 
 app.use(async (ctx) => {
 
