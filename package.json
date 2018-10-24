@@ -7,6 +7,7 @@
     "watch": "grunt --gruntfile tasks.coffee watch",
     "ts": "grunt --gruntfile tasks.coffee ts"
   },
+  "bin": "./bin/index.js",
   "dependencies": {
     "@types/koa": "^2.0.46",
     "@types/koa-bodyparser": "^5.0.1",
