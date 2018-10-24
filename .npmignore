@@ -1,0 +1,17 @@
+
+.env
+.baseDir.ts
+.tscache
+
+dist
+bin
+
+node_modules
+
+package-lock.json
+yarn.lock
+yarn-error.log
+
+content
+docs
+src
