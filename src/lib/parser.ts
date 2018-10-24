@@ -6,17 +6,21 @@ import Request       from '../@interfaces/WSGI.Request'
 
 import Authenticator from './authenticator'
 
-//import * as parseContent  from './parse-content'
+import * as parseContent  from './parse-content'
 import * as parseRequest  from './parse-request'
 import * as parseResponse from './parse-response'
 
-export default class Parser {
+export default class api {
 
   WSGI : Koa
 
   constructor(Koa : Koa) {
+    
     this.WSGI = Koa
     this.WSGI.use(bodyparser())
+
+    console.log(parseContent.read('reference/init/init').name)
+
   }
 
   incomingRequest(baseRequest : Koa.BaseRequest) {
