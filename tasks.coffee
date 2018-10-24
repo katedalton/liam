@@ -8,10 +8,16 @@ module.exports = (grunt) ->
       tasks:
         ['ts']
     ts:
-      default:
+      dist:
         src: ['src/*.ts', 'src/**/*.ts']
         tslint:   './tslint.json'
         tsconfig: './tsconfig.json'
+        outDir:   './dist/'
+      bin:
+        dist: ['cli/*.ts', 'cli/**/*.ts']
+        tslint:   './tslint.json'
+        tsconfig: './tsconfig.json'
+        outDir:   './bin/'
   
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-ts'
