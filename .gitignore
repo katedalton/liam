@@ -1,8 +1,10 @@
 
+.env
 .baseDir.ts
 .tscache
 
 dist
+bin
 
 node_modules
 
