@@ -1,6 +1,4 @@
 
-const Authenticator = {
-
+export default class Authenticator {
+  
 }
-
-export default Authenticator
