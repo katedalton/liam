@@ -3,9 +3,10 @@ import FS   = require('fs')
 import PATH = require('path')
 import YAML = require('yaml')
 
-export function parse(dataSource : string) {
+export function read(dataSource : string) {
   const
-    path = PATH.resolve('../content/' + dataSource),
+    path = PATH.resolve('./content/' + dataSource + '.yml'),
     file = FS.readFileSync(path, 'utf8')
-  console.log(file)
+  return YAML.parse(file)
 }
+ 
