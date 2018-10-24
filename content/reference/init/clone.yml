@@ -1,0 +1,21 @@
+
+name: git-clone
+
+short_description:
+  It clones a repository into a new directory.
+
+full_description:
+  This command creates an empty Git repository — basically a `.git` directory with subdirectories for objects, refs/heads, refs/tags, and template files. An initial HEAD file that references the HEAD of the master branch is also created.
+  If you provide a directory, the command is run inside it. If this directory does not exist, it will be created. Running `git init` in an existing repository is safe. It will not overwrite things that are already there.
+
+options_description:
+  -
+    flag: --quiet
+    flag_short: -q
+    description: Only print error and warning messages; all other output will be suppressed.
+  -
+    flag: --bare
+    description: Create a bare repository. If GIT_DIR environment is not set, it is set to the current working directory.
+  -
+    flag: --template=<template_directory>
+    description: Specify the directory from which templates will be used.
