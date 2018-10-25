@@ -1,26 +1,34 @@
 {
   "name": "liam",
   "description": "git/GitLab virtual assistant",
-  "author": "Andrea Leone <git@andrealone.xyz>",
+  "author":  "Andrea Leone <git@andrealone.xyz>",
+  "version": "0.0.0",
+  "repository": {
+    "gitlab": "https://gitlab.com/andrealeone/liam.git",
+    "github": "https://github.com/andrealeone/liam.git"
+  },
+  "license": "WTFPL",
   "scripts": {
+    "build": "docker build -f ./.dockerfile -t andrealeone/liam .",
+    "init":  "npm i",
+    "run":   "node ./dist/src/index.js",
     "start": "node -r dotenv/config ./dist/src/index.js dotenv_config_path=./.env",
     "watch": "grunt --gruntfile tasks.coffee watch",
-    "ts": "grunt --gruntfile tasks.coffee ts"
+    "ts":    "grunt --gruntfile tasks.coffee ts"
   },
-  "bin": "./bin/index.js",
+  "bin": "./bin/cli/index.js",
   "dependencies": {
-    "@types/dotenv": "^4.0.3",
     "@types/koa": "^2.0.46",
     "@types/koa-bodyparser": "^5.0.1",
     "@types/yaml": "^1.0.0",
     "cryptum": "^1.2.0",
-    "dotenv": "^6.1.0",
     "firebase": "^5.5.5",
     "koa": "^2.5.3",
     "koa-bodyparser": "^4.2.1",
     "yaml": "^1.0.0"
   },
   "devDependencies": {
+    "dotenv": "^6.1.0",
     "grunt": "^1.0.3",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-ts": "^6.0.0-beta.21",
