@@ -9,4 +9,3 @@ export function read(dataSource : string) {
     file = FS.readFileSync(path, 'utf8')
   return YAML.parse(file)
 }
- 
