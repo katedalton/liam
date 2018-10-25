@@ -1,0 +1,33 @@
+{
+  "responseId": "df92b979-7b13-4557-9579-b4bfbc6a9f28",
+  "queryResult": {
+    "queryText": "Hi!",
+    "action": "input.welcome",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "Hello! How can I help you?",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Greetings! How can I assist?"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/liam-bb09d/agent/intents/3f36458a-9d44-44b3-a9c5-fc01cd4ad63a",
+      "displayName": "Default Welcome Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 323,
+      "end_conversation": true
+    },
+    "languageCode": "en"
+  },
+  "webhookStatus": {
+    "code": 3,
+    "message": "Webhook call failed. Error: Failed to parse webhook JSON response: Expect message object but got: \"Hi.\"."
+  }
+}
