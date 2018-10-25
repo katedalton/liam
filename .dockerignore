@@ -2,6 +2,7 @@
 .env
 .baseDir.ts
 .tscache
+.vscode
 
 dist
 bin
