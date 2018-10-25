@@ -1,11 +1,16 @@
 
 .baseDir.ts
 .tscache
+.vscode
 
 dist
+bin
 
 node_modules
 
+package.json
 package-lock.json
 yarn.lock
 yarn-error.log
+
+.env
